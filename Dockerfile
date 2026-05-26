@@ -1,4 +1,5 @@
-FROM        docker.io/library/python:3.11
+FROM        docker.io/redhat/ubi9:latest
+RUN         dnf install -y python3.12 python3.12-pip python3.12-devel gcc
 WORKDIR     /app
 COPY        ./ /app/
 RUN         pip3.12 install --no-cache-dir .
