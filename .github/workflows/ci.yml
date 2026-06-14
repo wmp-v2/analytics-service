@@ -7,7 +7,7 @@ jobs:
        - uses: actions/checkout@v6
        - run: env
        - name: Build image
-         run: make docker-build
+         run: make docker-build image_tag=$(GITHUB_SHA)
 
   eks-deploy:
      runs-on: self-hosted
@@ -18,7 +18,7 @@ jobs:
         repository: sh-devops-itrn-2/wmp-helm-v1
         path: helm
      - name: Helm Deploy
-       run:  make eks-deploy
+       run:  make eks-deploy image_tag=$(GITHUB_SHA)
 
       
       
