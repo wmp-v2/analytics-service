@@ -5,4 +5,4 @@ docker-build:
 	docker push 471451201019.dkr.ecr.us-east-1.amazonaws.com/analytics-service:latest
 
 eks-deploy:
-	helm upgrage -i analytics-service ./helm
+	helm upgrage -i analytics-service . -f analytics-service.yml
