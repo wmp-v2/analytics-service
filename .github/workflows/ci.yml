@@ -12,11 +12,12 @@ jobs:
      runs-on: self-hosted
      steps:
      - uses: actions/checkout@v6
+     - uses: actions/checkout@v6
        with:
         repository: sh-devops-itrn-2/wmp-helm-v1
         path: helm
      - name: Helm Deploy
-       run:  make -C eks-deploy
+       run:  make eks-deploy
 
       
       
