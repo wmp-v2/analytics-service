@@ -16,6 +16,7 @@ jobs:
         repository: sh-devops-itrn-2/wmp-helm-v1
         path: helm
      - name: Helm Deploy
-       run:  make -C helm eks-deploy
+       run:  make eks-deploy
+       working-directory: helm
       
       
