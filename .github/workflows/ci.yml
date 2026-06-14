@@ -16,6 +16,8 @@ jobs:
        with:
         repository: sh-devops-itrn-2/wmp-helm-v1
         path: helm
+     - name: Update kubeconfig
+       run: aws eks update-kubeconfig --region us-east-1 --name dev
      - name: Helm Deploy
        run:  make eks-deploy
 
