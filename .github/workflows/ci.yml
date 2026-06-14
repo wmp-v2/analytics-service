@@ -16,7 +16,7 @@ jobs:
         repository: sh-devops-itrn-2/wmp-helm-v1
         path: helm
      - name: Helm Deploy
-       run:  make deploy
+       run:  make -C analytics-service eks-deploy
 
       
       
