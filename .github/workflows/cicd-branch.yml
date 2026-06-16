@@ -1,0 +1,10 @@
+name: CI/CD Branch - Analytics Service
+on:
+  push:
+   branches-ignore:
+     - main
+
+jobs:
+  cicd:
+    uses: wmp-v2/github-actions=reusable-workflows/.github/workflows/cicd-b.yml@main
+
